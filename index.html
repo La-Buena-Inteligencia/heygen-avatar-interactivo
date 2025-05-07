@@ -2,27 +2,29 @@
 <html lang="es">
 <head>
   <meta charset="UTF-8" />
-  <title>HeyGen Avatar Centrado</title>
+  <title>HeyGen Avatar Fullscreen centrado</title>
   <style>
     html, body {
       margin: 0;
       padding: 0;
-      height: 100%;
       overflow: hidden;
       background: #000;
+      height: 100vh;
+      width: 100vw;
     }
+
     .iframe-wrapper {
-      position: absolute;
-      top: 0;
-      left: 50%;
-      transform: translateX(-50%) scale(0.85); /* Centrado y escalado */
-      transform-origin: top center;
-      width: 117.6%;
-      height: 117.6%;
+      position: fixed;
+      top: -80px; /* Ajusta este valor para centrar el botón */
+      left: 0;
+      width: 100%;
+      height: calc(100% + 80px); /* Extiende hacia arriba para compensar el desplazamiento */
+      overflow: hidden;
     }
+
     iframe {
       width: 100%;
-      height: 100vh;
+      height: 100%;
       border: none;
     }
   </style>
