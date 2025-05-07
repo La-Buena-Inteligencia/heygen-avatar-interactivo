@@ -2,27 +2,26 @@
 <html lang="es">
 <head>
   <meta charset="UTF-8" />
-  <title>HeyGen Avatar Ajustado</title>
+  <title>Avatar centrado</title>
   <style>
     html, body {
       margin: 0;
       padding: 0;
-      height: 100%;
       overflow: hidden;
       background: #000;
     }
     .iframe-wrapper {
       position: absolute;
-      top: 0;
+      top: -100px; /* mueve el iframe hacia arriba */
       left: 0;
-      transform: scale(0.85); /* Escala a 85% */
-      transform-origin: top;
-      width: 117.6%; /* 100 / 0.85 para compensar */
+      transform: scale(0.85); /* reduce el tamaño total */
+      transform-origin: top center;
+      width: 117.6%;
       height: 117.6%;
     }
     iframe {
       width: 100%;
-      height: 100%;
+      height: 100vh;
       border: none;
     }
   </style>
@@ -31,8 +30,7 @@
   <div class="iframe-wrapper">
     <iframe
       src="https://labs.heygen.com/guest/streaming-embed?share=eyJxdWFsaXR5IjoiaGlnaCIsImF2YXRhck5hbWUiOiJlZGMyYzA2NzUzZDA0YzZmYjVmZTZmNjI0MDFiZmU3NCIsInByZXZpZXdJbWciOiJodHRwczovL2ZpbGVzMi5oZXlnZW4uYWkvYXZhdGFyL3YzL2VkYzJjMDY3NTNkMDRjNmZiNWZlNmY2MjQwMWJmZTc0L2Z1bGwvMi4yL3ByZXZpZXdfdGFyZ2V0LndlYnAiLCJuZWVkUmVtb3ZlQmFja2dyb3VuZCI6ZmFsc2UsImtub3dsZWRnZUJhc2VJZCI6IjlkY2ZiMzQyNzBiZDQ5NDNhOTg1Y2M2ZDdmZGE1ZTRlIiwidXNlcm5hbWUiOiJjMTljZmI2ZDhhODA0MjkzOTM4ZTAzZTNkOTZmNGZhZiJ9&inIFrame=1"
-      allow="microphone"
-      allowfullscreen>
+      allow="microphone">
     </iframe>
   </div>
 </body>
