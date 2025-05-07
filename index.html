@@ -2,36 +2,44 @@
 <html lang="es">
 <head>
   <meta charset="UTF-8" />
-  <title>Avatar centrado</title>
+  <title>Avatar HeyGen Fullscreen</title>
   <style>
     html, body {
       margin: 0;
       padding: 0;
-      overflow: hidden;
+      height: 100%;
+      overflow: hidden; /* Evita scroll */
       background: #000;
     }
-    .iframe-wrapper {
-      position: absolute;
-      top: -100px; /* mueve el iframe hacia arriba */
-      left: 0;
-      transform: scale(0.85); /* reduce el tamaño total */
-      transform-origin: top center;
-      width: 117.6%;
-      height: 117.6%;
-    }
-    iframe {
-      width: 100%;
+    #heygen-streaming-embed {
+      position: fixed;
+      top: 0; left: 0;
+      width: 100vw;
       height: 100vh;
+      z-index: 9999;
+      overflow: hidden;
+    }
+    #heygen-streaming-container {
+      width: 100%;
+      height: 100%;
+    }
+    #heygen-streaming-container iframe {
+      width: 100%;
+      height: 100%;
       border: none;
     }
   </style>
 </head>
 <body>
-  <div class="iframe-wrapper">
-    <iframe
-      src="https://labs.heygen.com/guest/streaming-embed?share=eyJxdWFsaXR5IjoiaGlnaCIsImF2YXRhck5hbWUiOiJlZGMyYzA2NzUzZDA0YzZmYjVmZTZmNjI0MDFiZmU3NCIsInByZXZpZXdJbWciOiJodHRwczovL2ZpbGVzMi5oZXlnZW4uYWkvYXZhdGFyL3YzL2VkYzJjMDY3NTNkMDRjNmZiNWZlNmY2MjQwMWJmZTc0L2Z1bGwvMi4yL3ByZXZpZXdfdGFyZ2V0LndlYnAiLCJuZWVkUmVtb3ZlQmFja2dyb3VuZCI6ZmFsc2UsImtub3dsZWRnZUJhc2VJZCI6IjlkY2ZiMzQyNzBiZDQ5NDNhOTg1Y2M2ZDdmZGE1ZTRlIiwidXNlcm5hbWUiOiJjMTljZmI2ZDhhODA0MjkzOTM4ZTAzZTNkOTZmNGZhZiJ9&inIFrame=1"
-      allow="microphone">
-    </iframe>
+  <div id="heygen-streaming-embed">
+    <div id="heygen-streaming-container">
+      <iframe
+        title="HeyGen Avatar"
+        src="https://labs.heygen.com/guest/streaming-embed?share=eyJxdWFsaXR5IjoiaGlnaCIsImF2YXRhck5hbWUiOiJlZGMyYzA2NzUzZDA0YzZmYjVmZTZmNjI0MDFiZmU3NCIsInByZXZpZXdJbWciOiJodHRwczovL2ZpbGVzMi5oZXlnZW4uYWkvYXZhdGFyL3YzL2VkYzJjMDY3NTNkMDRjNmZiNWZlNmY2MjQwMWJmZTc0L2Z1bGwvMi4yL3ByZXZpZXdfdGFyZ2V0LndlYnAiLCJuZWVkUmVtb3ZlQmFja2dyb3VuZCI6ZmFsc2UsImtub3dsZWRnZUJhc2VJZCI6IjlkY2ZiMzQyNzBiZDQ5NDNhOTg1Y2M2ZDdmZGE1ZTRlIiwidXNlcm5hbWUiOiJjMTljZmI2ZDhhODA0MjkzOTM4ZTAzZTNkOTZmNGZhZiJ9&inIFrame=1"
+        allow="microphone"
+        allowfullscreen>
+      </iframe>
+    </div>
   </div>
 </body>
 </html>
