@@ -28,8 +28,8 @@
         #heygen-streaming-embed {
           z-index: 9999;
           position: fixed;
-          left: 50%;
           top: 50%;
+          left: 50%;
           transform: translate(-50%, -50%);
           width: 200px;
           height: 200px;
@@ -41,19 +41,27 @@
           opacity: 0;
           visibility: hidden;
         }
+
         #heygen-streaming-embed.show {
           opacity: 1;
           visibility: visible;
         }
+
         #heygen-streaming-embed.expand {
-          ${clientWidth < 540 ? "height: 266px; width: 96%; left: 50%; transform: translateX(-50%);" : "height: 366px; width: calc(366px * 16 / 9);"}
+          top: 50%;
+          left: 50%;
+          transform: translate(-50%, -50%);
+          height: 366px;
+          width: calc(366px * 16 / 9);
           border: 0;
           border-radius: 8px;
         }
+
         #heygen-streaming-container {
           width: 100%;
           height: 100%;
         }
+
         #heygen-streaming-container iframe {
           width: 100%;
           height: 100%;
